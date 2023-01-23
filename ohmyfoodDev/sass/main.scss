@@ -1,0 +1,229 @@
+/* Intégration des POLICES au CSS*/
+/* Police Logos et Titres*/
+@font-face{	font-family: "shrikhand";
+    src: url(../../fonts/Shrikhand-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;}
+/* Polices Texte */
+    @font-face{	font-family: "roboto";
+    src: url(../../fonts/Roboto-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;}
+
+/* Définition des classes de couleurs principales */
+    $color-primary:#9356DC;   
+    $color-secondary:#FF79DA;
+    $color-third: #99E2D0;
+    $color-white: #F2F2F2;   
+    $color-black: #000000; 
+    $color-grey: #EDEDED;     
+
+
+body {
+    margin: 0;
+    font-family: 'roboto';
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+
+/* On applique la police aux logos, qui pour l'instant sont des images */
+#logo, #footerLogo {
+    font-family: 'shrikhand';
+}
+
+
+
+#logo {
+    text-align: center;
+    
+    img {
+        width: 40%;
+        margin: 1.5em auto 0.5em;
+    }
+}
+        
+#localisation {
+    background: #EDEDED;
+    box-shadow: inset 0px 3px 6px -5px #8c8c8c;
+    color: #4F4F4F;
+    
+    font-size: 1em;
+    font-weight: bold;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2em 1.8em 0.2em 0;
+    
+    i {
+        color: #4F4F4F;
+        padding-right: 1.3em;
+    }
+    p {
+        color: #4F4F4F; 
+    }
+}
+
+
+#headerBottom {
+    background: #F7F7F7;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8% 8% 15%;
+    
+    h1{
+        font-size: 1.5em;
+        font-weight: bolder;
+        
+        width: 260px;
+        margin: 0 0 .6em;
+    }
+    h3{
+        font-size: 1.1em;
+        font-weight: 100;
+        color: #4F4F4F;
+
+        width: 320px;
+        margin: 0 0 1.2em;
+    }
+    a {
+        width: 250px;
+
+        button{
+                font-size: 0.9em;
+                color: white;
+                background: #FF79DA;
+                border: none;
+                padding: 1.1em;
+                border-radius: 30px;
+                width: 220px;
+                box-shadow: 1px 5px 9px 0px rgba(140,140,140,0.5),
+                            inset -35px -22px 50px 4px rgba(147,86,220,0.70)
+        } 
+    }
+}
+
+
+
+main {
+    background: #F7F7F7;
+}
+
+article {
+    border-radius: 20px;
+    box-shadow: 1px 5px 9px 0px rgba(140,140,140,0.5);
+}
+
+#fonctionnement {
+    padding: 3%;
+    background: white;
+
+    article {
+        background: #F7F7F7;
+        
+        width:300px;
+        height: 70px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+        margin: 0.8em auto;       
+
+        .articleStep {
+            font-size: .7em;
+            text-align: center;
+            line-height: 2.4;
+            color: white;
+            background-color: #9356DC;
+            border-radius: 50%;
+
+            width: 25px;
+            height: 25px;
+            margin-left: -1.2em;
+        }
+        .articleIcon {
+            font-size: 1em;
+            color: #4F4F4F;
+
+            margin-left: 22px;
+        }
+        .articleText {
+            font-size: 1em;
+
+            margin: 0 22px;
+        }
+    }
+}
+
+
+#restaurants {
+ width: 100%;
+}
+#restaurantsContainer {
+    width: 100%;
+}
+
+.card {
+    width:90%;
+    
+    margin: 1em auto;
+    a {text-decoration: none;}
+    .imageCard{
+        position: relative;
+        
+        height: 180px;
+        
+        overflow: hidden;
+        border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+
+        display: flex;
+        align-items:flex-end;
+
+        img {
+            
+
+            width:100%;
+            height: 230px;
+            object-fit: cover;
+        }
+        .patchNouveaute {
+            background: #99E2D0;
+            color: green;
+            font-size: .7em;
+            font-weight: bolder;
+            text-align: center;
+            border-radius: 3px;
+            
+            position: absolute;
+            top: 10px;
+            right: 10px;
+
+            margin: 0;
+            padding: .6em 1em;
+            width: 50px;
+        }
+    }
+    .presentationCard {
+        display: flex;
+        justify-content: space-between;
+        height: 90px;
+
+        
+    }
+}
+
+
+
+
+
+
+
+#footerLogo img{
+    width:30%;
+}
