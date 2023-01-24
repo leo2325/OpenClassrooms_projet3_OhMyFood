@@ -1,38 +1,32 @@
-/* Intégration des POLICES au CSS*/
-/* Police Logos et Titres*/
-@font-face{	font-family: "shrikhand";
-    src: url(../../fonts/Shrikhand-Regular.ttf);
-    font-weight: normal;
-    font-style: normal;}
-/* Polices Texte */
-    @font-face{	font-family: "roboto";
-    src: url(../../fonts/Roboto-Regular.ttf);
-    font-weight: normal;
-    font-style: normal;}
+@import "./utils/variables";
+@import "./utils/fonctions";
+@import "./utils/mixins";
+@import "./utils/placeholders";
 
-/* Définition des classes de couleurs principales */
-    $color-primary:#9356DC;   
-    $color-secondary:#FF79DA;
-    $color-third: #99E2D0;
-    $color-white: #F2F2F2;   
-    $color-black: #000000; 
-    $color-grey: #EDEDED;     
+@import "./base/base";
+@import "./base/typography";
 
+@import "./components/buttons";
+@import "./components/titles";
 
-body {
-    margin: 0;
-    font-family: 'roboto';
-}
+@import "./layouts/header";
+@import "./layouts/nav";
+@import "./layouts/container";
+@import "./layouts/form";
 
-h2 {
-    font-size: 1.5em;
-}
+@import "./pages/work";
+@import "./pages/about";
+@import "./pages/project";
 
 
-/* On applique la police aux logos, qui pour l'instant sont des images */
-#logo, #footerLogo {
-    font-family: 'shrikhand';
-}
+
+
+
+
+
+
+
+
 
 
 
@@ -45,73 +39,46 @@ h2 {
     }
 }
         
-#localisation {
-    background: #EDEDED;
-    box-shadow: inset 0px 3px 6px -5px #8c8c8c;
-    color: #4F4F4F;
+#localisation_section{
+    @include default_flexbox;
+
+
+    background:  darken($color-paleGrey, 5%);
+    box-shadow: inset 0px 3px 6px -5px lighten($color-darkGrey, 10%);
+    color: $color-darkGrey;
     
     font-size: 1em;
     font-weight: bold;
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 0.2em 1.8em 0.2em 0;
     
     i {
-        color: #4F4F4F;
+        color: $color-darkGrey;
         padding-right: 1.3em;
     }
     p {
-        color: #4F4F4F; 
+        color: $color-darkGrey; 
     }
 }
 
 
 #headerBottom {
-    background: #F7F7F7;
+    @include default_flexbox($flex-direction: $headerBottom_flex-direction);
+
+    background: $color-paleGrey;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    
+    
+    
     padding: 8% 8% 15%;
     
-    h1{
-        font-size: 1.5em;
-        font-weight: bolder;
-        
-        width: 260px;
-        margin: 0 0 .6em;
-    }
-    h3{
-        font-size: 1.1em;
-        font-weight: 100;
-        color: #4F4F4F;
-
-        width: 320px;
-        margin: 0 0 1.2em;
-    }
-    a {
-        width: 250px;
-
-        button{
-                font-size: 0.9em;
-                color: white;
-                background: #FF79DA;
-                border: none;
-                padding: 1.1em;
-                border-radius: 30px;
-                width: 220px;
-                box-shadow: 1px 5px 9px 0px rgba(140,140,140,0.5),
-                            inset -35px -22px 50px 4px rgba(147,86,220,0.70)
-        } 
-    }
+    
 }
 
 
 
 main {
-    background: #F7F7F7;
+    background: $color-paleGrey;
 }
 
 article {
@@ -121,25 +88,26 @@ article {
 
 #fonctionnement {
     padding: 3%;
-    background: white;
-
+    background: $color-white;
+    h2 {
+        padding: 3%;
+    }
     article {
-        background: #F7F7F7;
+        @include default_flexbox($justify-content: $fonctionnement-article_justify-content);
+
+
+        background: $color-paleGrey;
         
         width:300px;
         height: 70px;
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: row;
-        align-items: center;
         margin: 0.8em auto;       
 
         .articleStep {
             font-size: .7em;
             text-align: center;
             line-height: 2.4;
-            color: white;
-            background-color: #9356DC;
+            color: $color-white;
+            background-color: $color-primary;
             border-radius: 50%;
 
             width: 25px;
@@ -148,7 +116,7 @@ article {
         }
         .articleIcon {
             font-size: 1em;
-            color: #4F4F4F;
+            color: $color-darkGrey;
 
             margin-left: 22px;
         }
@@ -162,59 +130,76 @@ article {
 
 
 #restaurants {
- width: 100%;
+    width: 100%;
+
+    h2{ 
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 #restaurantsContainer {
     width: 100%;
 }
 
-.card {
+.card-prev {
     width:90%;
-    
     margin: 1em auto;
-    a {text-decoration: none;}
-    .imageCard{
-        position: relative;
-        
-        height: 180px;
-        
-        overflow: hidden;
-        border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-
-        display: flex;
-        align-items:flex-end;
-
-        img {
-            
-
-            width:100%;
-            height: 230px;
-            object-fit: cover;
-        }
-        .patchNouveaute {
-            background: #99E2D0;
-            color: green;
-            font-size: .7em;
-            font-weight: bolder;
-            text-align: center;
-            border-radius: 3px;
-            
-            position: absolute;
-            top: 10px;
-            right: 10px;
-
-            margin: 0;
-            padding: .6em 1em;
-            width: 50px;
-        }
+    
+    &__link {
+        text-decoration: none;
     }
-    .presentationCard {
-        display: flex;
-        justify-content: space-between;
-        height: 90px;
 
-        
+        &-img {
+            @include default_flexbox($align-items: $card-prev-img-box_align-items);
+
+            position: relative; 
+            height: 180px;
+            overflow: hidden;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            display: flex;
+            align-items:flex-end;
+            
+            img{
+                width:100%;
+                height: 230px;
+                object-fit: cover;
+            }
+            
+            &__patchNew {
+                background: $color-third;
+                color: darken( $color-third, 40%);
+                font-size: .7em;
+                font-weight: bolder;
+                text-align: center;
+                border-radius: 3px; 
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                margin: 0;
+                padding: .6em 1em;
+                width: 50px;
+            }
+        }
+
+        &-presentation {
+            @include default_flexbox($justify-content: $card-prev-presentation-box_justify-content);
+
+            height: 80px;
+            padding: 0 20px 0 15px;
+            color: $color-black;
+            &__title{
+                font-size: 1.1em;
+                font-weight: bolder;
+                margin: 0;
+            }
+            &__city {
+                font-size: 1.1em;
+                margin: 0;
+            }
+            &__iconLike {
+                font-size: 1.5em;
+            }
     }
 }
 

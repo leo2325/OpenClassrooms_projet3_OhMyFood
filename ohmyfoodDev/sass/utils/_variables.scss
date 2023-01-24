@@ -1,0 +1,23 @@
+/* Définition des variables de couleurs principales */
+$color-primary:#9356DC;   
+$color-secondary:#FF79DA;
+$color-third: #99E2D0;
+        
+$color-paleGrey: #F7F7F7;
+$color-darkGrey:#4F4F4F;
+    
+$color-white: #ffffff;   
+$color-black: #000000; 
+
+
+/* MIXINS FLEXBOX */
+/* Variables par défaults utilisées par les mixins flexbox */
+$default_display: flex;
+$default_align-items: center;
+$default_justify-content: center;
+$default_flex-direction: row;
+/* Variables spécifiques utilisées par les mixinsflexbox */
+$headerBottom_flex-direction: column;
+$fonctionnement-article_justify-content: flex-start;
+$card-prev-img-box_align-items: flex-end;
+$card-prev-presentation-box_justify-content: space-between;

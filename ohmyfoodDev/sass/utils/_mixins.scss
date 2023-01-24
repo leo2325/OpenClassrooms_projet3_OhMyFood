@@ -1,0 +1,8 @@
+/* MIXINS FLEXBOX */
+/* Définition du mixin flexbox */
+@mixin default_flexbox($display: $default_display, $align-items: $default_align-items, $justify-content: $default_justify-content, $flex-direction: $default_flex-direction){
+    display: $default_display;
+    align-items: $default_align-items;
+    justify-content: $justify-content;
+    flex-direction: $flex-direction;
+}  

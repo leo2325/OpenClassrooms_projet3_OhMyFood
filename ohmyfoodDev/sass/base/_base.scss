@@ -1,0 +1,12 @@
+* {
+    box-sizing: border-box;
+  }
+body {
+    margin: 0;
+    font-family: 'roboto';
+}
+
+    /* On applique la police aux logos, qui pour l'instant sont des images */
+    #logo, #footerLogo {
+        font-family: 'shrikhand';
+    }
