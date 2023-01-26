@@ -10,14 +10,27 @@ $color-white: #ffffff;
 $color-black: #000000; 
 
 
+
 /* MIXINS FLEXBOX */
-/* Variables par défaults utilisées par les mixins flexbox */
+/* Variables par défaults utilisées par les mixins FLEXBOX */
 $default_display: flex;
 $default_align-items: center;
 $default_justify-content: center;
 $default_flex-direction: row;
-/* Variables spécifiques utilisées par les mixinsflexbox */
+/* Variables spécifiques utilisées par les mixins FLEXBOX */
 $headerBottom_flex-direction: column;
 $fonctionnement-article_justify-content: flex-start;
 $card-prev-img-box_align-items: flex-end;
 $card-prev-presentation-box_justify-content: space-between;
+
+
+
+/* MIXINS TITLES */
+/* Variables par défaults utilisées par les mixins TITLES */
+$default-width: 340px;
+$default-margin: 0;
+$default-font-weight: bolder;
+$default-font-size: 1.5em;
+/* Variables spécifiques utilisées par les mixins TITLES */
+$h3_font-size: 1.1em;
+$h3_font-weight: 100;

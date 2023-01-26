@@ -1,0 +1,8 @@
+#headerBottom {
+    
+    @include default_flexbox($flex-direction: $headerBottom_flex-direction);
+    
+        background: $color-paleGrey;
+        text-align: center;
+        padding: 40px;   
+}

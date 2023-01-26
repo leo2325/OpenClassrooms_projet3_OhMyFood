@@ -10,71 +10,11 @@
 @import "./components/titles";
 
 @import "./layouts/header";
-@import "./layouts/nav";
-@import "./layouts/container";
-@import "./layouts/form";
+@import "./layouts/footer";
 
-@import "./pages/work";
-@import "./pages/about";
-@import "./pages/project";
-
-
-
-
-
-
-
-
-
-
-
-
-
-#logo {
-    text-align: center;
-    
-    img {
-        width: 40%;
-        margin: 1.5em auto 0.5em;
-    }
-}
-        
-#localisation_section{
-    @include default_flexbox;
-
-
-    background:  darken($color-paleGrey, 5%);
-    box-shadow: inset 0px 3px 6px -5px lighten($color-darkGrey, 10%);
-    color: $color-darkGrey;
-    
-    font-size: 1em;
-    font-weight: bold;
-    
-    padding: 0.2em 1.8em 0.2em 0;
-    
-    i {
-        color: $color-darkGrey;
-        padding-right: 1.3em;
-    }
-    p {
-        color: $color-darkGrey; 
-    }
-}
-
-
-#headerBottom {
-    @include default_flexbox($flex-direction: $headerBottom_flex-direction);
-
-    background: $color-paleGrey;
-    text-align: center;
-    
-    
-    
-    padding: 8% 8% 15%;
-    
-    
-}
-
+@import "./pages/localisation_container";
+@import "./pages/fonctionnement_section";
+@import "./pages/headerBottom_section";
 
 
 main {
@@ -86,62 +26,17 @@ article {
     box-shadow: 1px 5px 9px 0px rgba(140,140,140,0.5);
 }
 
-#fonctionnement {
-    padding: 3%;
-    background: $color-white;
-    h2 {
-        padding: 3%;
-    }
-    article {
-        @include default_flexbox($justify-content: $fonctionnement-article_justify-content);
 
 
-        background: $color-paleGrey;
-        
-        width:300px;
-        height: 70px;
-        margin: 0.8em auto;       
 
-        .articleStep {
-            font-size: .7em;
-            text-align: center;
-            line-height: 2.4;
-            color: $color-white;
-            background-color: $color-primary;
-            border-radius: 50%;
 
-            width: 25px;
-            height: 25px;
-            margin-left: -1.2em;
-        }
-        .articleIcon {
-            font-size: 1em;
-            color: $color-darkGrey;
-
-            margin-left: 22px;
-        }
-        .articleText {
-            font-size: 1em;
-
-            margin: 0 22px;
-        }
-    }
+#restaurants-cards_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-
-#restaurants {
-    width: 100%;
-
-    h2{ 
-        width: 90%;
-        margin: 0 auto;
-    }
-}
-#restaurantsContainer {
-    width: 100%;
-}
-
-.card-prev {
+.card-prev_container {
     width:90%;
     margin: 1em auto;
     
@@ -178,7 +73,6 @@ article {
                 right: 10px;
                 margin: 0;
                 padding: .6em 1em;
-                width: 50px;
             }
         }
 
@@ -198,7 +92,10 @@ article {
                 margin: 0;
             }
             &__iconLike {
-                font-size: 1.5em;
+
+                i{
+                    font-size: 1.5em;
+                }
             }
     }
 }
@@ -209,6 +106,7 @@ article {
 
 
 
-#footerLogo img{
-    width:30%;
-}
+
+
+
+

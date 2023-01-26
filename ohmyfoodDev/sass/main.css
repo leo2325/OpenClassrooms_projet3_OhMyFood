@@ -1,12 +1,18 @@
 @charset "UTF-8";
 /* Définition des variables de couleurs principales */
 /* MIXINS FLEXBOX */
-/* Variables par défaults utilisées par les mixins flexbox */
-/* Variables spécifiques utilisées par les mixinsflexbox */
+/* Variables par défaults utilisées par les mixins FLEXBOX */
+/* Variables spécifiques utilisées par les mixins FLEXBOX */
+/* MIXINS TITLES */
+/* Variables par défaults utilisées par les mixins TITLES */
+/* Variables spécifiques utilisées par les mixins TITLES */
 /* MIXINS FLEXBOX */
 /* Définition du mixin flexbox */
+/* MIXINS TITLES */
+/* Définition du mixin titles */
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -15,7 +21,7 @@ body {
 }
 
 /* On applique la police aux logos, qui pour l'instant sont des images */
-#logo, #footerLogo {
+#logo_section--img, #footerLogo {
   font-family: "shrikhand";
 }
 
@@ -34,7 +40,7 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-.headerBottom_btn {
+.headerBottom-card_btn {
   width: 240px;
   font-size: 0.9em;
   color: #ffffff;
@@ -46,77 +52,98 @@ body {
 }
 
 h1 {
-  font-size: 1.5em;
+  width: 340px;
+  margin: 0;
   font-weight: bolder;
-  width: 260px;
-  margin: 0 0 0.6em;
+  font-size: 1.5em;
+  padding: 5px 30px;
 }
 
 h2 {
+  width: 340px;
+  margin: 0;
+  font-weight: bolder;
   font-size: 1.5em;
+  padding: 35px 20px 5px;
 }
 
 h3 {
-  font-size: 1.1em;
+  width: 340px;
+  margin: 0;
   font-weight: 100;
+  font-size: 1.1em;
   color: #4F4F4F;
-  width: 320px;
-  margin: 0 0 1.2em;
+  padding: 5px 5px 25px;
 }
 
-#logo {
+#logo_container {
   text-align: center;
-}
-#logo img {
-  width: 40%;
+  display: flex;
   margin: 1.5em auto 0.5em;
 }
+#logo_container #logo_container--icon-arrowBack {
+  color: #4F4F4F;
+  font-size: 1.2em;
+  width: 15%;
+  position: absolute;
+}
+#logo_container #logo_container--img {
+  width: 40%;
+  position: relative;
+  margin: 0 auto;
+}
 
-#localisation_section {
+footer {
+  background: #4F4F4F;
+  padding: 5% 0 10% 5%;
+}
+footer #footer_logo {
+  width: 100%;
+}
+footer #footer_logo #footer-logo_title {
+  margin-bottom: 0.5em;
+  padding: 0;
+  color: #ffffff;
+  font-family: shrikhand;
+  font-weight: lighter;
+  font-size: 1.2em;
+}
+footer .footer_nav_link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  line-height: 0;
+}
+footer .footer_nav_link i {
+  font-size: 0.7em;
+  color: #ffffff;
+  margin-right: 1em;
+  width: 0.8em;
+}
+footer .footer_nav_link p {
+  color: #ffffff;
+}
+
+#localisation_container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   background: #eaeaea;
   box-shadow: inset 0px 3px 6px -5px dimgray;
-  color: #4F4F4F;
-  font-size: 1em;
   font-weight: bold;
   padding: 0.2em 1.8em 0.2em 0;
-}
-#localisation_section i {
   color: #4F4F4F;
+}
+#localisation_container i {
   padding-right: 1.3em;
-}
-#localisation_section p {
-  color: #4F4F4F;
-}
-
-#headerBottom {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background: #F7F7F7;
-  text-align: center;
-  padding: 8% 8% 15%;
-}
-
-main {
-  background: #F7F7F7;
-}
-
-article {
-  border-radius: 20px;
-  box-shadow: 1px 5px 9px 0px rgba(140, 140, 140, 0.5);
 }
 
 #fonctionnement {
-  padding: 3%;
   background: #ffffff;
 }
-#fonctionnement h2 {
-  padding: 3%;
+#fonctionnement #fonctionnementContainer {
+  padding: 0 0 30px 10px;
 }
 #fonctionnement article {
   display: flex;
@@ -124,9 +151,9 @@ article {
   justify-content: flex-start;
   flex-direction: row;
   background: #F7F7F7;
-  width: 300px;
+  width: 340px;
   height: 70px;
-  margin: 0.8em auto;
+  margin: 1.2em auto;
 }
 #fonctionnement article .articleStep {
   font-size: 0.7em;
@@ -149,28 +176,41 @@ article {
   margin: 0 22px;
 }
 
-#restaurants {
-  width: 100%;
-}
-#restaurants h2 {
-  width: 90%;
-  margin: 0 auto;
-}
-
-#restaurantsContainer {
-  width: 100%;
+#headerBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #F7F7F7;
+  text-align: center;
+  padding: 40px;
 }
 
-.card-prev {
+main {
+  background: #F7F7F7;
+}
+
+article {
+  border-radius: 20px;
+  box-shadow: 1px 5px 9px 0px rgba(140, 140, 140, 0.5);
+}
+
+#restaurants-cards_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-prev_container {
   width: 90%;
   margin: 1em auto;
 }
-.card-prev__link {
+.card-prev_container__link {
   text-decoration: none;
 }
-.card-prev-img {
+.card-prev_container-img {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   flex-direction: row;
   position: relative;
@@ -181,13 +221,13 @@ article {
   display: flex;
   align-items: flex-end;
 }
-.card-prev-img img {
+.card-prev_container-img img {
   width: 100%;
   height: 230px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card-prev-img__patchNew {
+.card-prev_container-img__patchNew {
   background: #99E2D0;
   color: #278870;
   font-size: 0.7em;
@@ -199,9 +239,8 @@ article {
   right: 10px;
   margin: 0;
   padding: 0.6em 1em;
-  width: 50px;
 }
-.card-prev-presentation {
+.card-prev_container-presentation {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -210,19 +249,15 @@ article {
   padding: 0 20px 0 15px;
   color: #000000;
 }
-.card-prev-presentation__title {
+.card-prev_container-presentation__title {
   font-size: 1.1em;
   font-weight: bolder;
   margin: 0;
 }
-.card-prev-presentation__city {
+.card-prev_container-presentation__city {
   font-size: 1.1em;
   margin: 0;
 }
-.card-prev-presentation__iconLike {
+.card-prev_container-presentation__iconLike i {
   font-size: 1.5em;
-}
-
-#footerLogo img {
-  width: 30%;
 }/*# sourceMappingURL=main.css.map */

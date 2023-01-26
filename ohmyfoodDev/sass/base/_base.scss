@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 body {
     margin: 0;
@@ -7,6 +8,6 @@ body {
 }
 
     /* On applique la police aux logos, qui pour l'instant sont des images */
-    #logo, #footerLogo {
+    #logo_section--img, #footerLogo {
         font-family: 'shrikhand';
     }
