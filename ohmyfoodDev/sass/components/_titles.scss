@@ -1,8 +1,11 @@
 h1{
     @include titles-box;
+    
+    font-family: "shrikhand";
+    
     padding: 5px 30px;
 }
-
+    
 h2 {
     @include titles-box;
     padding: 35px 20px 5px;
@@ -12,4 +15,12 @@ h3{
     @include titles-box($font-size: $h3_font-size, $font-weight: $h3_font-weight);
     color: $color-darkGrey;
     padding: 5px 5px 25px;
+}
+
+/* Titres entrées, plats desserts*/
+h4 {
+    font-weight: 100;
+    font-size: .9em;
+    color: $color-darkGrey;
+    
 }

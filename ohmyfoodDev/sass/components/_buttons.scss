@@ -1,4 +1,4 @@
-.headerBottom-card_btn { width: 240px;
+.all_btn { 
     font-size: 0.9em;
     color: $color-white;
     background: $color-secondary;
@@ -8,3 +8,11 @@
     box-shadow: 1px 5px 9px 0px rgba(140,140,140,0.5),
                 inset -35px -22px 50px 4px rgba(147,86,220,0.70)
 } 
+
+.headerBottom-card_btn {
+    width: 240px;
+}
+
+.btn_order {
+    width: 200px;
+}
