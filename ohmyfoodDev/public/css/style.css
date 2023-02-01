@@ -20,6 +20,10 @@ body {
   font-family: "roboto";
 }
 
+main {
+  background: #F7F7F7;
+}
+
 /* On applique la police aux logos, qui pour l'instant sont des images */
 #logo_section--img, #footerLogo {
   font-family: "shrikhand";
@@ -41,6 +45,7 @@ body {
   font-style: normal;
 }
 .all_btn {
+  width: 240px;
   font-size: 0.9em;
   color: #ffffff;
   background: #FF79DA;
@@ -50,12 +55,11 @@ body {
   box-shadow: 1px 5px 9px 0px rgba(140, 140, 140, 0.5), inset -35px -22px 50px 4px rgba(147, 86, 220, 0.7);
 }
 
-.headerBottom-card_btn {
-  width: 240px;
-}
-
-.btn_order {
-  width: 200px;
+.btn-order_box {
+  height: 100px;
+  padding: 15px 0;
+  margin: 0 auto;
+  text-align: center;
 }
 
 h1 {
@@ -63,7 +67,7 @@ h1 {
   margin: 0;
   font-weight: bolder;
   font-size: 1.5em;
-  font-family: "shrikhand";
+  font-weight: bold;
   padding: 5px 30px;
 }
 
@@ -84,7 +88,6 @@ h3 {
   padding: 5px 5px 25px;
 }
 
-/* Titres entrées, plats desserts*/
 h4 {
   font-weight: 100;
   font-size: 0.9em;
@@ -156,11 +159,69 @@ footer .footer_nav_link p {
   width: 250px;
   margin: 30px 0 10px;
   padding: 0;
+  font-family: "shrikhand";
+  font-weight: 100;
 }
 .card-title_bloc i {
   width: 50px;
   font-size: 1.5em;
   margin: 30px 0 10px;
+}
+
+.plate-elements_bloc {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  background: white;
+  margin: 15px 0;
+  padding-left: 5px;
+  line-height: 0.5;
+  height: 70px;
+}
+.plate-elements_bloc:hover .plate_selected {
+  display: block;
+  padding-top: 25px;
+}
+
+.plate-description_bloc {
+  width: 70%;
+}
+
+.plate_name {
+  font-size: 1em;
+  font-weight: bold;
+  padding-left: 0.5em;
+}
+
+.plate_legende {
+  font-size: 0.9em;
+  padding-left: 0.5em;
+}
+
+.plate_price {
+  width: 12%;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding-right: 1.5em;
+  text-align: right;
+}
+
+.plate_selected {
+  display: none;
+  width: 20%;
+  height: 70px;
+  background: #99E2D0;
+  text-align: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.plate_selected i {
+  color: #ffffff;
+  font-size: 1.2em;
 }
 
 #localisation_container {
@@ -223,10 +284,6 @@ footer .footer_nav_link p {
   background: #F7F7F7;
   text-align: center;
   padding: 40px;
-}
-
-main {
-  background: #F7F7F7;
 }
 
 article {
@@ -308,48 +365,6 @@ article {
 
 .menus_section {
   padding: 10px;
-}
-
-.plate-elements_bloc {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 100%;
-  background: white;
-  margin: 15px 0;
-  padding-left: 5px;
-  line-height: 0.5;
-  height: 70px;
-}
-.plate-elements_bloc:hover .plate_selected i {
-  display: flex;
-}
-.plate-elements_bloc .plate_name {
-  font-size: 1em;
-  font-weight: bold;
-}
-.plate-elements_bloc .plate_legende {
-  font-size: 0.9em;
-}
-.plate-elements_bloc .plate_price {
-  font-size: 0.9em;
-  font-weight: bold;
-}
-.plate-elements_bloc .plate_selected {
-  width: 50px;
-  height: 70px;
-  background: #99E2D0;
-  text-align: center;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-.plate-elements_bloc .plate_selected i {
-  /*display: none;*/
-  color: #ffffff;
-  font-size: 1.2em;
 }
 
 /*# sourceMappingURL=style.css.map */

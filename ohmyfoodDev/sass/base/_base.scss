@@ -7,6 +7,10 @@ body {
     font-family: 'roboto';
 }
 
+main {
+    background: $color-paleGrey;
+}
+
     /* On applique la police aux logos, qui pour l'instant sont des images */
     #logo_section--img, #footerLogo {
         font-family: 'shrikhand';
