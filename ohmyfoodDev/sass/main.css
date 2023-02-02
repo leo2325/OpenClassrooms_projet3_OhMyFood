@@ -20,6 +20,10 @@ body {
   font-family: "roboto";
 }
 
+main {
+  background: #F7F7F7;
+}
+
 /* On applique la police aux logos, qui pour l'instant sont des images */
 #logo_section--img, #footerLogo {
   font-family: "shrikhand";
@@ -40,15 +44,24 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-.headerBottom-card_btn {
-  width: 240px;
+.all_btn {
+  width: 250px;
   font-size: 0.9em;
   color: #ffffff;
   background: #FF79DA;
   border: none;
-  padding: 1.1em;
+  padding: 1.1em 2em;
   border-radius: 30px;
   box-shadow: 1px 5px 9px 0px rgba(140, 140, 140, 0.5), inset -35px -22px 50px 4px rgba(147, 86, 220, 0.7);
+}
+.all_btn:hover {
+  box-shadow: 1px 5px 15px 0px rgba(63, 63, 63, 0.5), inset -35px -22px 50px 4px rgba(187, 131, 255, 0.7);
+}
+
+.btn-order_box {
+  height: 100px;
+  margin: 20px auto 0;
+  text-align: center;
 }
 
 h1 {
@@ -56,6 +69,7 @@ h1 {
   margin: 0;
   font-weight: bolder;
   font-size: 1.5em;
+  font-weight: bold;
   padding: 5px 30px;
 }
 
@@ -74,6 +88,68 @@ h3 {
   font-size: 1.1em;
   color: #4F4F4F;
   padding: 5px 5px 25px;
+}
+
+h4 {
+  margin-bottom: 5px;
+  font-weight: 100;
+  font-size: 0.9em;
+  color: #4F4F4F;
+}
+
+/* Bouton like INDEX.HTML */
+.card-prev-presentation__iconLike {
+  width: 50px;
+  z-index: 1000;
+  font-size: 1.5em;
+}
+.card-prev-presentation__iconLike :nth-child(1) {
+  position: absolute;
+  right: 10%;
+  z-index: 1000;
+  color: #000000;
+  margin: -55px 15px;
+  transition-property: color;
+  transition-duration: 1s;
+}
+.card-prev-presentation__iconLike :last-child {
+  position: absolute;
+  right: 10%;
+  color: #ffffff;
+  margin: -55px 15px;
+  transition-property: color;
+  transition-duration: 1s;
+}
+.card-prev-presentation__iconLike:hover :nth-child(1) {
+  color: #FF79DA;
+}
+.card-prev-presentation__iconLike:hover :last-child {
+  color: #FF79DA;
+}
+
+/* Bouton like CARTES RESTAURANTS */
+.card-title-icon_button-like :nth-child(1) {
+  position: absolute;
+  top: 35px;
+  right: 45px;
+  z-index: 1000;
+  color: #000000;
+  transition-property: color;
+  transition-duration: 1s;
+}
+.card-title-icon_button-like :last-child {
+  position: absolute;
+  top: 35px;
+  right: 45px;
+  color: #ffffff;
+  transition-property: color;
+  transition-duration: 1s;
+}
+.card-title-icon_button-like:hover :nth-child(1) {
+  color: #FF79DA;
+}
+.card-title-icon_button-like:hover :last-child {
+  color: #FF79DA;
 }
 
 #logo_container {
@@ -124,6 +200,100 @@ footer .footer_nav_link p {
   color: #ffffff;
 }
 
+.image_presentation img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-title_bloc {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  background: #F7F7F7;
+  width: 100%;
+  border-radius: 40px 40px 0 0;
+  margin: -50px auto 0;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1000;
+}
+.card-title_bloc h1 {
+  width: 250px;
+  margin: 30px 0 10px;
+  padding: 0;
+  font-family: "shrikhand";
+  font-weight: 100;
+}
+.card-title_bloc i {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.plate-elements_bloc {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 370px;
+  background: white;
+  margin: 15px auto;
+  padding-left: 5px;
+  line-height: 0.5;
+  height: 70px;
+}
+.plate-elements_bloc:hover .plate_selected {
+  display: block;
+  padding-top: 25px;
+}
+
+.plate-description_bloc {
+  max-width: 280px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.plate_name {
+  width: 280px;
+  font-size: 1em;
+  font-weight: bold;
+  padding-left: 0.5em;
+  text-overflow: ellipsis;
+}
+
+.plate_legende {
+  font-size: 0.9em;
+  padding-left: 0.5em;
+}
+
+.plate_price {
+  width: 40px;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding-left: 1.5em;
+  padding-right: 3em;
+  text-align: right;
+}
+
+.plate_selected {
+  display: none;
+  width: 70px;
+  height: 70px;
+  background: #99E2D0;
+  text-align: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.plate_selected i {
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
 #localisation_container {
   display: flex;
   align-items: center;
@@ -143,7 +313,7 @@ footer .footer_nav_link p {
   background: #ffffff;
 }
 #fonctionnement #fonctionnementContainer {
-  padding: 0 0 30px 10px;
+  padding: 0 20px 30px;
 }
 #fonctionnement article {
   display: flex;
@@ -151,7 +321,7 @@ footer .footer_nav_link p {
   justify-content: flex-start;
   flex-direction: row;
   background: #F7F7F7;
-  width: 340px;
+  max-width: 340px;
   height: 70px;
   margin: 1.2em auto;
 }
@@ -184,10 +354,6 @@ footer .footer_nav_link p {
   background: #F7F7F7;
   text-align: center;
   padding: 40px;
-}
-
-main {
-  background: #F7F7F7;
 }
 
 article {
@@ -223,7 +389,7 @@ article {
 }
 .card-prev_container-img img {
   width: 100%;
-  height: 230px;
+  height: 210px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -258,6 +424,12 @@ article {
   font-size: 1.1em;
   margin: 0;
 }
-.card-prev_container-presentation__iconLike i {
-  font-size: 1.5em;
+
+.menus_section {
+  padding: 10px;
+}
+.menus_section .menus_section-border_div {
+  width: 40px;
+  height: 2px;
+  background: #99E2D0;
 }/*# sourceMappingURL=main.css.map */

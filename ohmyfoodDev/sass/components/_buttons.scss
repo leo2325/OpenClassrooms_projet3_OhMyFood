@@ -1,18 +1,21 @@
 .all_btn { 
-    width: 240px;
+    width: 250px;
     font-size: 0.9em;
     color: $color-white;
     background: $color-secondary;
     border: none;
-    padding: 1.1em;
+    padding: 1.1em 2em;
     border-radius: 30px;
     box-shadow: 1px 5px 9px 0px rgba(140,140,140,0.5),
-                inset -35px -22px 50px 4px rgba(147,86,220,0.70)
+                inset -35px -22px 50px 4px rgba(147,86,220,0.70);
+    &:hover{
+        box-shadow: 1px 5px 15px 0px rgba(63, 63, 63, 0.5),
+                    inset -35px -22px 50px 4px rgba(187, 131, 255, 0.7);
+    }
 } 
 
 .btn-order_box {
     height: 100px;
-    padding: 15px 0;
-    margin: 0 auto;
+    margin: 20px auto 0;
     text-align: center;
 }

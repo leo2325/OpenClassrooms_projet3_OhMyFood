@@ -3,13 +3,13 @@
     background: $color-white;
 
     #fonctionnementContainer {
-        padding: 0 0 30px 10px;
+        padding: 0 20px 30px;
 }
 
     article {
         @include default_flexbox($justify-content: $fonctionnement-article_justify-content);
         background: $color-paleGrey;
-        width:340px;
+        max-width:340px;
         height: 70px;
         margin: 1.2em auto;       
 

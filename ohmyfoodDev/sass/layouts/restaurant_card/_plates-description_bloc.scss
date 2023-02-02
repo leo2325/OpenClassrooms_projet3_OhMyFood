@@ -1,20 +1,26 @@
 .plate-description_bloc {
-    width: 70%;
+    max-width: 280px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    
 }
 
-    .plate_name {
+    .plate_name {width: 280px;
         font-size: 1em;
         font-weight: bold;
-        padding-left: .5em;
+        padding-left: .5em;text-overflow: ellipsis;
     }
     .plate_legende {
         font-size: 0.9em;
         padding-left: .5em;
     }
     .plate_price {
-        width: 12%;
+        width: 40px;
+
         font-size: 0.9em;
         font-weight: bold;
-        padding-right: 1.5em;
+        padding-left: 1.5em;
+        padding-right: 3em;
         text-align: right;
     }

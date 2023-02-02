@@ -3,9 +3,12 @@
 
     justify-content: space-between;
     align-items: flex-end;
+
     width: 100%;
+    max-width: 370px;
+    
     background: white;
-    margin: 15px 0;
+    margin: 15px auto;
     padding-left: 5px;
     line-height: 0.5;
     height: 70px;
