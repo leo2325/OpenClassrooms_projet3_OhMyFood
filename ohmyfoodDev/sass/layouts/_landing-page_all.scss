@@ -1,0 +1,74 @@
+#landing-page_box {
+    
+    right:0;
+    width: 100%;
+    height:100%;
+    position: fixed;
+    top: 0;
+    z-index: 950;
+    background: $color-third;
+    background: linear-gradient(115deg, $color-third 15%, $color-primary 45%, $color-secondary 75%);
+
+    animation: landing-page_animation-box 3000ms;
+    animation-fill-mode: forwards;
+    
+    h1{
+        color: $color-white;
+        text-shadow: 14px 16px 9px #99E2D0;
+        font-size: 50px;
+        position: fixed;
+        top: 45%;
+        right: 0;
+        font-family: "shrikhand";
+        width: 100%;
+        text-align: center;
+        animation: landing-page_animation-titre 2800ms;
+        animation-fill-mode: forwards;
+    }  
+}
+
+
+@keyframes landing-page_animation-titre {
+    0% {
+        transform: scaleX(1);
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    25% {
+        transform: scaleX(0.1);
+    }
+    50% {
+        transform: scaleX(1.5);
+        opacity: .8;
+    }
+    75% {
+        transform: scaleX(0.7); 
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: scaleX(1);
+        opacity: 0;
+    }
+}
+
+@keyframes landing-page_animation-box {
+    0% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    45% {
+        transform: scaleX(1.4);
+    }
+    90% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+}

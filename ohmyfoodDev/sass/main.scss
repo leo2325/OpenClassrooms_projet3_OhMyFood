@@ -6,9 +6,14 @@
 @import "./base/base";
 @import "./base/typography";
 
+@import "./layouts/landing-page_all";
+
 @import "./components/buttons";
 @import "./components/titles";
 @import "./components/buttons-like";
+@import "./components/articles";
+@import "./components/menus_section-box";
+@import "./components/restaurant-card-prev";
 
 @import "./layouts/header";
 @import "./layouts/footer";
@@ -24,83 +29,86 @@
 
 
 
-
-article {
-    border-radius: 20px;
-    box-shadow: 1px 5px 9px 0px rgba(140,140,140,0.5);
-}
-
-
-#restaurants-cards_container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.card-prev_container {
-    width:90%;
-    margin: 1em auto;
-    
-    &__link {
-        text-decoration: none;
+/* ECRAN TABLETTE */
+  @media screen and (min-width: 768px) {
+    h1, h3 {
+        width: 100%;font-size: 1.3em;
+        line-height: 1;
     }
-
-        &-img {
-            @include default_flexbox($align-items: $card-prev-img-box_align-items);
-
-            position: relative; 
-            height: 180px;
-            overflow: hidden;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            display: flex;
-            align-items:flex-end;
-            
-            img{
-                width:100%;
-                height: 210px;
-                object-fit: cover;
-            }
-            
-            &__patchNew {
-                background: $color-third;
-                color: darken( $color-third, 40%);
-                font-size: .7em;
-                font-weight: bolder;
-                text-align: center;
-                border-radius: 3px; 
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                margin: 0;
-                padding: .6em 1em;
-            }
+    h2 {
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+    #logo_container {
+        max-width: 40em;
+        margin-bottom: 2em;
+    }
+    #headerBottom{
+        padding: 20px;
+    }
+    #fonctionnementContainer {
+        display: flex;
+        flex-direction: row;
+    }
+    #fonctionnement article {
+        max-width: 200px;
+    }
+    #fonctionnement article .articleStep {
+        font-size: 0.8em;
+        font-weight: bolder;
+        width: 50px;
+        height: 30px;
+    }
+    #restaurants-cards_container {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 10px;
+    }
+    .card-prev-presentation__iconLike :nth-child(1), .card-prev-presentation__iconLike :last-child{
+        right: unset;
+    }
+    .card-prev_container-presentation {
+        margin-left: 25%;
+    }
+    .menus-section_article-box {
+        margin: 0 auto;
+        display:grid;
+        grid-template-columns: repeat(3, 2fr);
+        grid-gap: 30px;
+    }
+    footer {
+        padding: 20px;
+    }
+    #footer_nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        .footer_nav_link {
+            margin-right: 50px;
         }
-
-        &-presentation {
-            @include default_flexbox($justify-content: $card-prev-presentation-box_justify-content);
-
-            height: 80px;
-            padding: 0 20px 0 15px;
-            color: $color-black;
-            &__title{
-                font-size: 1.1em;
-                font-weight: bolder;
-                margin: 0;
-            }
-            &__city {
-                font-size: 1.1em;
-                margin: 0;
-            }
     }
-}
+  }
 
-
-.menus_section {
-    padding: 10px;
-    .menus_section-border_div {
-        width: 40px;
-        height: 2px;
-        background: $color-third;
+  /* ECRAN DESKTOP */
+  @media screen and (min-width: 1400px) {
+    #fonctionnementContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
-}
+    #fonctionnement article {
+        max-width: 350px;
+        margin: 0 30px;
+    }
+    #fonctionnement article .articleStep {
+        width: 30px;
+        height: 30px;
+    }
+    #restaurants-cards_container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+    }
+    .footer_nav_link {
+        margin-right: 100px;
+    }
+  }
