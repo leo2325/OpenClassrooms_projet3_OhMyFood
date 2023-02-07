@@ -22,11 +22,10 @@
         transition-duration: 1s;       
     }
         &:hover {
-            & :nth-child(1) {
-                color: $color-secondary;
-            }
-            & :last-child { 
-                color: $color-secondary;
+            & :nth-child(1), & :last-child {
+                background: linear-gradient($color-secondary, $color-primary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
 }
@@ -52,11 +51,10 @@
         transition-duration: 1s;       
     }
         &:hover {
-            & :nth-child(1) {
-                color: $color-secondary;
-            }
-            & :last-child { 
-                color: $color-secondary;
+            & :nth-child(1), & :last-child {
+                background: linear-gradient($color-secondary, $color-primary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
 }
