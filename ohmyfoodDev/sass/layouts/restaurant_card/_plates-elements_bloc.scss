@@ -4,27 +4,27 @@
     justify-content: none;
     align-items: flex-end;
 
-    width: 100%;
     max-width: 370px;
 
     white-space: nowrap;
     overflow: hidden;
-
+    height: 80px;
     background: white;
     margin: 15px auto;
     padding-left: 5px;
-    line-height: 0.5;
-    height: 70px;
     
     &:hover {
         .plate_selected {
-            margin-right: 0;
+            right: -72px;
+            padding-right:50px;
             i {
                transform: rotate(1turn); 
                transition: transform 500ms ease-in-out;
-            }
-            
+            } 
+        }
+        .plate-description_bloc {
+            width: 180px; 
         } 
-
     }
 }
+

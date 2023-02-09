@@ -1,27 +1,28 @@
 .plate-description_bloc {
-    width: 280px;
-    white-space: nowrap;
-    overflow: hidden;
-    display: block;
-    text-overflow: ellipsis;
+    width: 250px;
+    align-items: center;
+    transition-property: width;
+    transition-duration: .5s; 
 }
-
+    .plate_name, .plate_legende {
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        text-overflow: ellipsis;
+        padding-left: .5em;
+    }
     .plate_name {
-        width: 280px;
         font-size: 1em;
         font-weight: bold;
-        padding-left: .5em;
+        margin-bottom: 10px;
     }
     .plate_legende {
         font-size: 0.9em;
-        padding-left: .5em;
-        width: 280px;
+        margin-top: 10px;
     }
     .plate_price {
-        width: 90px;
-        
         font-size: 0.9em;
         font-weight: bold;
-        padding-right: 2em;
-        text-align: right;
+        position: relative;
+        right: -55px;
     }

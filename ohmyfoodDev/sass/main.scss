@@ -27,12 +27,11 @@
 @import "./pages/fonctionnement_section";
 @import "./pages/headerBottom_section";
 
-
-
 /* ECRAN TABLETTE */
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 800px) {
     h1, h3 {
-        width: 100%;font-size: 1.3em;
+        width: 100%;
+        font-size: 1.3em;
         line-height: 1;
     }
     h2 {
@@ -72,9 +71,12 @@
     }
     .menus-section_article-box {
         margin: 0 auto;
-        display:grid;
-        grid-template-columns: repeat(3, 2fr);
-        grid-gap: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 15px;
+    }
+    .plate-elements_bloc{
+        width: 370px;
     }
     footer {
         padding: 20px;
@@ -104,8 +106,8 @@
         width: 30px;
         height: 30px;
     }
-    #restaurants-cards_container {
-        grid-template-columns: repeat(4, 1fr);
+    .menus-section_article-box {
+        grid-template-columns: repeat(3, 2fr);
         grid-gap: 10px;
     }
     .footer_nav_link {

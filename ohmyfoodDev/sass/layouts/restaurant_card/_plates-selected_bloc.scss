@@ -1,20 +1,17 @@
 .plate_selected {
-
-    width: 80px; 
-    height: 70px;
-    padding-top: 25px;
-
-    margin-right: -80px;
+    position: relative;
+    height:80px;
+    padding: 30px;
 
     background: $color-third;
     text-align: center; 
 
-    transition-property: margin-right;
+    right: -150px;
+    transition-property: right;
     transition-duration: .5s; 
 
     i {     
         color: $color-white;
         font-size: 1.2em;
-
     }
 } 
