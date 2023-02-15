@@ -1,0 +1,30 @@
+footer {
+    background: $color-darkGrey;
+    padding: 5% 0 10% 5%;
+    #footer_logo {
+        width:100%;
+        #footer-logo_title {
+            margin-bottom: .5em;
+            padding: 0;
+            color: $color-white;
+            font-family: shrikhand;
+            font-weight: lighter;
+            font-size: 1.2em;
+        }
+    }
+    .footer_nav_link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        line-height: 0;
+            i {
+                font-size: .7em;
+                color: $color-white;
+                margin-right: 1em;
+                width: .8em;
+            }
+            p {
+                color: $color-white;
+            }
+    }
+}

@@ -1,0 +1,11 @@
+/* Intégration des POLICES au CSS*/
+/* Police Logos et Titres*/
+@font-face{	font-family: "shrikhand";
+    src: url(../../fonts/Shrikhand-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;}
+/* Polices Texte */
+    @font-face{	font-family: "roboto";
+    src: url(../../fonts/Roboto-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;}

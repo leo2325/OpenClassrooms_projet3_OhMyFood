@@ -1,0 +1,30 @@
+/* MIXINS FLEXBOX */
+/* Définition du mixin flexbox */
+@mixin default_flexbox(
+    $display: $default_display, 
+    $align-items: $default_align-items, 
+    $justify-content: $default_justify-content, 
+    $flex-direction: $default_flex-direction
+)   {
+        display: $display;
+        align-items: $align-items;
+        justify-content: $justify-content;
+        flex-direction: $flex-direction;
+    }  
+
+
+/* MIXINS TITLES */
+/* Définition du mixin titles */
+@mixin titles-box (
+    $width: $default-width,
+    $margin: $default-margin,
+    $font-weight: $default-font-weight,
+    $font-size: $default-font-size
+)
+    {
+        width: $width;
+        margin: $margin;
+        font-weight: $font-weight;
+        font-size: $font-size;
+    }
+    

@@ -1,0 +1,13 @@
+#localisation_container{
+    
+    @include default_flexbox;
+
+        background: darken($color-paleGrey, 5%);
+        box-shadow: inset 0px 3px 6px -5px lighten($color-darkGrey, 10%);
+        font-weight: bold;
+        padding: 0.2em 1.8em 0.2em 0;
+        color: $color-darkGrey;
+        i {
+            padding-right: 1.3em;
+        }
+}

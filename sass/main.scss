@@ -1,0 +1,116 @@
+@import "./utils/variables";
+@import "./utils/fonctions";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./layouts/landing-page_all";
+
+@import "./components/buttons";
+@import "./components/titles";
+@import "./components/buttons-like";
+@import "./components/articles";
+@import "./components/menus_section-box";
+@import "./components/restaurant-card-prev";
+
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./layouts/restaurant_card/card-img_presentation";
+@import "./layouts/restaurant_card/card-title_bloc";
+@import "./layouts/restaurant_card/plates-elements_bloc";
+@import "./layouts/restaurant_card/plates-description_bloc";
+@import "./layouts/restaurant_card/plates-selected_bloc";
+
+@import "./pages/localisation_container";
+@import "./pages/fonctionnement_section";
+@import "./pages/headerBottom_section";
+
+/* ECRAN TABLETTE */
+  @media screen and (min-width: 800px) {
+    h1, h3 {
+        width: 100%;
+        font-size: 1.3em;
+        line-height: 1;
+    }
+    h2 {
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+    #logo_container {
+        max-width: 40em;
+        margin-bottom: 2em;
+    }
+    #headerBottom{
+        padding: 20px;
+    }
+    #fonctionnementContainer {
+        display: flex;
+        flex-direction: row;
+    }
+    #fonctionnement article {
+        max-width: 200px;
+    }
+    #fonctionnement article .articleStep {
+        font-size: 0.8em;
+        font-weight: bolder;
+        width: 50px;
+        height: 30px;
+    }
+    #restaurants-cards_container {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 10px;
+    }
+    .card-prev-presentation__iconLike :nth-child(1), .card-prev-presentation__iconLike :last-child{
+        right: unset;
+    }
+    .card-prev_container-presentation {
+        margin-left: 25%;
+    }
+    .menus-section_article-box {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 15px;
+    }
+    .plate-elements_bloc{
+        width: 370px;
+    }
+    footer {
+        padding: 20px;
+    }
+    #footer_nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        .footer_nav_link {
+            margin-right: 50px;
+        }
+    }
+  }
+
+  /* ECRAN DESKTOP */
+  @media screen and (min-width: 1400px) {
+    #fonctionnementContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #fonctionnement article {
+        max-width: 350px;
+        margin: 0 30px;
+    }
+    #fonctionnement article .articleStep {
+        width: 30px;
+        height: 30px;
+    }
+    .menus-section_article-box {
+        grid-template-columns: repeat(3, 2fr);
+        grid-gap: 10px;
+    }
+    .footer_nav_link {
+        margin-right: 100px;
+    }
+  }

@@ -1,0 +1,28 @@
+.plate-description_bloc {
+    width: 250px;
+    align-items: center;
+    transition-property: width;
+    transition-duration: .5s; 
+}
+    .plate_name, .plate_legende {
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        text-overflow: ellipsis;
+        padding-left: .5em;
+    }
+    .plate_name {
+        font-size: 1em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .plate_legende {
+        font-size: 0.9em;
+        margin-top: 10px;
+    }
+    .plate_price {
+        font-size: 0.9em;
+        font-weight: bold;
+        position: relative;
+        right: -55px;
+    }

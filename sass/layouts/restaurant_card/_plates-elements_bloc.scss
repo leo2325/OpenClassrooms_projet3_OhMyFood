@@ -1,0 +1,30 @@
+.plate-elements_bloc{
+    @include default_flexbox($justify-content: $fonctionnement-article_justify-content);
+
+    justify-content: none;
+    align-items: flex-end;
+
+    max-width: 370px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    height: 80px;
+    background: white;
+    margin: 15px auto;
+    padding-left: 5px;
+    
+    &:hover {
+        .plate_selected {
+            right: -72px;
+            padding-right:50px;
+            i {
+               transform: rotate(1turn); 
+               transition: transform 500ms ease-in-out;
+            } 
+        }
+        .plate-description_bloc {
+            width: 180px; 
+        } 
+    }
+}
+

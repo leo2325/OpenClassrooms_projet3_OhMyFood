@@ -1,0 +1,27 @@
+#logo_container {
+    text-align: center;
+    display: flex;
+    margin: 1.5em auto 0.5em;
+    max-width: 25em;
+    #logo_container--icon-arrowBack{
+        color: $color-darkGrey;
+        font-size: 1.2em;
+        width: 15%;
+        position: absolute;
+    } 
+    #logo_container--img {
+            width: 40%;
+            position: relative;
+            margin:0 auto;
+    }
+}
+ 
+
+
+
+
+
+
+
+
+

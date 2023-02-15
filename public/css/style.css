@@ -1,0 +1,635 @@
+@charset "UTF-8";
+/* Définition des variables de couleurs principales */
+/* MIXINS FLEXBOX */
+/* Variables par défaults utilisées par les mixins FLEXBOX */
+/* Variables spécifiques utilisées par les mixins FLEXBOX */
+/* MIXINS TITLES */
+/* Variables par défaults utilisées par les mixins TITLES */
+/* Variables spécifiques utilisées par les mixins TITLES */
+/* MIXINS FLEXBOX */
+/* Définition du mixin flexbox */
+/* MIXINS TITLES */
+/* Définition du mixin titles */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "roboto";
+}
+
+main {
+  background: #F7F7F7;
+}
+
+/* On applique la police aux logos, qui pour l'instant sont des images */
+#logo_section--img, #footerLogo {
+  font-family: "shrikhand";
+}
+
+/* Intégration des POLICES au CSS*/
+/* Police Logos et Titres*/
+@font-face {
+  font-family: "shrikhand";
+  src: url(../../fonts/Shrikhand-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+/* Polices Texte */
+@font-face {
+  font-family: "roboto";
+  src: url(../../fonts/Roboto-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+#landing-page_box {
+  right: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 950;
+  background: #99E2D0;
+  background: linear-gradient(115deg, #99E2D0 15%, #9356DC 45%, #FF79DA 75%);
+  animation: landing-page_animation-box 3000ms;
+  animation-fill-mode: forwards;
+}
+#landing-page_box h1 {
+  color: #ffffff;
+  text-shadow: 14px 16px 9px #99E2D0;
+  font-size: 50px;
+  position: fixed;
+  top: 45%;
+  right: 0;
+  font-family: "shrikhand";
+  width: 100%;
+  text-align: center;
+  animation: landing-page_animation-titre 2800ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes landing-page_animation-titre {
+  0% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  25% {
+    transform: scaleX(0.1);
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 0.8;
+  }
+  75% {
+    transform: scaleX(0.7);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+@keyframes landing-page_animation-box {
+  0% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  45% {
+    transform: scaleX(1.4);
+  }
+  90% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+.all_btn {
+  width: 250px;
+  font-size: 0.9em;
+  color: #ffffff;
+  background: #FF79DA;
+  border: none;
+  padding: 1.1em 2em;
+  border-radius: 30px;
+  box-shadow: 1px 5px 9px 0px rgba(140, 140, 140, 0.5), inset -35px -22px 50px 4px rgba(147, 86, 220, 0.7);
+}
+.all_btn:hover {
+  box-shadow: 1px 5px 15px 0px rgba(63, 63, 63, 0.5), inset -35px -22px 50px 4px rgba(187, 131, 255, 0.7);
+}
+
+.btn-order_box {
+  height: 100px;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+h1 {
+  width: 340px;
+  margin: 0;
+  font-weight: bolder;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 5px 30px;
+}
+
+h2 {
+  width: 340px;
+  margin: 0;
+  font-weight: bolder;
+  font-size: 1.5em;
+  padding: 35px 20px 5px;
+}
+
+h3 {
+  width: 340px;
+  margin: 0;
+  font-weight: 100;
+  font-size: 1.1em;
+  color: #4F4F4F;
+  padding: 5px 5px 25px;
+}
+
+h4 {
+  margin-bottom: 5px;
+  font-weight: 100;
+  font-size: 0.9em;
+  color: #4F4F4F;
+}
+
+/* Bouton like INDEX.HTML */
+.card-prev-presentation__iconLike {
+  width: 50px;
+  z-index: 1000;
+  font-size: 1.5em;
+}
+.card-prev-presentation__iconLike :nth-child(1) {
+  position: absolute;
+  right: 10%;
+  z-index: 900;
+  color: #000000;
+  margin: -55px 15px;
+  transition-property: color;
+  transition-duration: 1s;
+}
+.card-prev-presentation__iconLike :last-child {
+  position: absolute;
+  right: 10%;
+  color: #ffffff;
+  margin: -55px 15px;
+  transition-property: color;
+  transition-duration: 1s;
+}
+.card-prev-presentation__iconLike:hover :nth-child(1), .card-prev-presentation__iconLike:hover :last-child {
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Bouton like CARTES RESTAURANTS */
+.card-title-icon_button-like :nth-child(1) {
+  position: absolute;
+  top: 35px;
+  right: 45px;
+  z-index: 1000;
+  color: #000000;
+  transition-property: color;
+  transition-duration: 1s;
+}
+.card-title-icon_button-like :last-child {
+  position: absolute;
+  top: 35px;
+  right: 45px;
+  color: #ffffff;
+  transition-property: color;
+  transition-duration: 1s;
+}
+.card-title-icon_button-like:hover :nth-child(1), .card-title-icon_button-like:hover :last-child {
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+article {
+  border-radius: 20px;
+  box-shadow: 1px 5px 9px 0px rgba(140, 140, 140, 0.5);
+}
+
+.menus_section {
+  padding: 10px;
+  overflow: hidden;
+  animation: glissement 1000ms;
+  animation-fill-mode: forwards;
+}
+.menus_section .menus_section-border_div {
+  width: 40px;
+  height: 2px;
+  background: #99E2D0;
+}
+@keyframes glissement {
+  0% {
+    margin-top: -10%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    margin-top: 0%;
+    opacity: 100%;
+  }
+}
+
+#restaurants-cards_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-prev_container {
+  width: 90%;
+  margin: 1em auto;
+}
+.card-prev_container__link {
+  text-decoration: none;
+}
+.card-prev_container-img {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  align-items: flex-end;
+}
+.card-prev_container-img img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+.card-prev_container-img__patchNew {
+  background: #99E2D0;
+  color: #278870;
+  font-size: 0.7em;
+  font-weight: bolder;
+  text-align: center;
+  border-radius: 3px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin: 0;
+  padding: 0.6em 1em;
+}
+.card-prev_container-presentation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 80px;
+  padding: 0 20px 0 15px;
+  color: #000000;
+}
+.card-prev_container-presentation__title {
+  font-size: 1.1em;
+  font-weight: bolder;
+  margin: 0;
+}
+.card-prev_container-presentation__city {
+  font-size: 1.1em;
+  margin: 0;
+}
+
+#logo_container {
+  text-align: center;
+  display: flex;
+  margin: 1.5em auto 0.5em;
+  max-width: 25em;
+}
+#logo_container #logo_container--icon-arrowBack {
+  color: #4F4F4F;
+  font-size: 1.2em;
+  width: 15%;
+  position: absolute;
+}
+#logo_container #logo_container--img {
+  width: 40%;
+  position: relative;
+  margin: 0 auto;
+}
+
+footer {
+  background: #4F4F4F;
+  padding: 5% 0 10% 5%;
+}
+footer #footer_logo {
+  width: 100%;
+}
+footer #footer_logo #footer-logo_title {
+  margin-bottom: 0.5em;
+  padding: 0;
+  color: #ffffff;
+  font-family: shrikhand;
+  font-weight: lighter;
+  font-size: 1.2em;
+}
+footer .footer_nav_link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  line-height: 0;
+}
+footer .footer_nav_link i {
+  font-size: 0.7em;
+  color: #ffffff;
+  margin-right: 1em;
+  width: 0.8em;
+}
+footer .footer_nav_link p {
+  color: #ffffff;
+}
+
+.image_presentation img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-title_bloc {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  background: #F7F7F7;
+  width: 100%;
+  border-radius: 40px 40px 0 0;
+  margin: -50px auto 0;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1000;
+}
+.card-title_bloc h1 {
+  width: 250px;
+  margin: 30px 0 10px;
+  padding: 0;
+  font-family: "shrikhand";
+  font-weight: 100;
+}
+.card-title_bloc i {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.plate-elements_bloc {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: none;
+  align-items: flex-end;
+  max-width: 370px;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 80px;
+  background: white;
+  margin: 15px auto;
+  padding-left: 5px;
+}
+.plate-elements_bloc:hover .plate_selected {
+  right: -72px;
+  padding-right: 50px;
+}
+.plate-elements_bloc:hover .plate_selected i {
+  transform: rotate(1turn);
+  transition: transform 500ms ease-in-out;
+}
+.plate-elements_bloc:hover .plate-description_bloc {
+  width: 180px;
+}
+
+.plate-description_bloc {
+  width: 250px;
+  align-items: center;
+  transition-property: width;
+  transition-duration: 0.5s;
+}
+
+.plate_name, .plate_legende {
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+  padding-left: 0.5em;
+}
+
+.plate_name {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plate_legende {
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.plate_price {
+  font-size: 0.9em;
+  font-weight: bold;
+  position: relative;
+  right: -55px;
+}
+
+.plate_selected {
+  position: relative;
+  height: 80px;
+  padding: 30px;
+  background: #99E2D0;
+  text-align: center;
+  right: -150px;
+  transition-property: right;
+  transition-duration: 0.5s;
+}
+.plate_selected i {
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+#localisation_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background: #eaeaea;
+  box-shadow: inset 0px 3px 6px -5px dimgray;
+  font-weight: bold;
+  padding: 0.2em 1.8em 0.2em 0;
+  color: #4F4F4F;
+}
+#localisation_container i {
+  padding-right: 1.3em;
+}
+
+#fonctionnement {
+  background: #ffffff;
+}
+#fonctionnement #fonctionnementContainer {
+  padding: 0 20px 30px;
+}
+#fonctionnement article {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  background: #F7F7F7;
+  max-width: 340px;
+  height: 70px;
+  margin: 1.2em auto;
+}
+#fonctionnement article .articleStep {
+  font-size: 0.7em;
+  text-align: center;
+  line-height: 2.4;
+  color: #ffffff;
+  background-color: #9356DC;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  margin-left: -1.2em;
+}
+#fonctionnement article .articleIcon {
+  font-size: 1em;
+  color: #4F4F4F;
+  margin-left: 22px;
+}
+#fonctionnement article .articleText {
+  font-size: 1em;
+  margin: 0 22px;
+}
+
+#headerBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #F7F7F7;
+  text-align: center;
+  padding: 40px;
+}
+
+/* ECRAN TABLETTE */
+@media screen and (min-width: 800px) {
+  h1, h3 {
+    width: 100%;
+    font-size: 1.3em;
+    line-height: 1;
+  }
+
+  h2 {
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+
+  #logo_container {
+    max-width: 40em;
+    margin-bottom: 2em;
+  }
+
+  #headerBottom {
+    padding: 20px;
+  }
+
+  #fonctionnementContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #fonctionnement article {
+    max-width: 200px;
+  }
+
+  #fonctionnement article .articleStep {
+    font-size: 0.8em;
+    font-weight: bolder;
+    width: 50px;
+    height: 30px;
+  }
+
+  #restaurants-cards_container {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 10px;
+  }
+
+  .card-prev-presentation__iconLike :nth-child(1), .card-prev-presentation__iconLike :last-child {
+    right: unset;
+  }
+
+  .card-prev_container-presentation {
+    margin-left: 25%;
+  }
+
+  .menus-section_article-box {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 15px;
+  }
+
+  .plate-elements_bloc {
+    width: 370px;
+  }
+
+  footer {
+    padding: 20px;
+  }
+
+  #footer_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  #footer_nav .footer_nav_link {
+    margin-right: 50px;
+  }
+}
+/* ECRAN DESKTOP */
+@media screen and (min-width: 1400px) {
+  #fonctionnementContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #fonctionnement article {
+    max-width: 350px;
+    margin: 0 30px;
+  }
+
+  #fonctionnement article .articleStep {
+    width: 30px;
+    height: 30px;
+  }
+
+  .menus-section_article-box {
+    grid-template-columns: repeat(3, 2fr);
+    grid-gap: 10px;
+  }
+
+  .footer_nav_link {
+    margin-right: 100px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

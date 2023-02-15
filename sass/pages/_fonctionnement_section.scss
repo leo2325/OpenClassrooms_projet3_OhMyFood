@@ -1,0 +1,37 @@
+
+#fonctionnement { 
+    background: $color-white;
+
+    #fonctionnementContainer {
+        padding: 0 20px 30px;
+}
+
+    article {
+        @include default_flexbox($justify-content: $fonctionnement-article_justify-content);
+        background: $color-paleGrey;
+        max-width:340px;
+        height: 70px;
+        margin: 1.2em auto;       
+
+        .articleStep {
+            font-size: .7em;
+            text-align: center;
+            line-height: 2.4;
+            color: $color-white;
+            background-color: $color-primary;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            margin-left: -1.2em;
+        }
+        .articleIcon {
+            font-size: 1em;
+            color: $color-darkGrey;
+            margin-left: 22px;
+        }
+        .articleText {
+            font-size: 1em;
+            margin: 0 22px;
+        }
+    }
+}

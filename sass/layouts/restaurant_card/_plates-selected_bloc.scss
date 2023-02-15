@@ -1,0 +1,17 @@
+.plate_selected {
+    position: relative;
+    height:80px;
+    padding: 30px;
+
+    background: $color-third;
+    text-align: center; 
+
+    right: -150px;
+    transition-property: right;
+    transition-duration: .5s; 
+
+    i {     
+        color: $color-white;
+        font-size: 1.2em;
+    }
+} 
