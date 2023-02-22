@@ -45,11 +45,11 @@ main {
   font-style: normal;
 }
 #landing-page_box {
-  right: 0;
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
+  right: 0;
   z-index: 950;
   background: #99E2D0;
   background: linear-gradient(115deg, #99E2D0 15%, #9356DC 45%, #FF79DA 75%);
@@ -168,55 +168,68 @@ h4 {
 
 /* Bouton like INDEX.HTML */
 .card-prev-presentation__iconLike {
-  width: 50px;
-  z-index: 1000;
+  position: absolute;
+  right: 10%;
+  height: 25px;
+  width: 52px;
+  overflow: hidden;
+  z-index: 901;
   font-size: 1.5em;
+  margin: -55px 15px;
 }
 .card-prev-presentation__iconLike :nth-child(1) {
   position: absolute;
-  right: 10%;
   z-index: 900;
   color: #000000;
-  margin: -55px 15px;
-  transition-property: color;
+  transition-property: all;
   transition-duration: 1s;
 }
 .card-prev-presentation__iconLike :last-child {
   position: absolute;
-  right: 10%;
-  color: #ffffff;
-  margin: -55px 15px;
-  transition-property: color;
-  transition-duration: 1s;
-}
-.card-prev-presentation__iconLike:hover :nth-child(1), .card-prev-presentation__iconLike:hover :last-child {
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.8s;
+}
+.card-prev-presentation__iconLike:hover :nth-child(1) {
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card-prev-presentation__iconLike:hover :last-child {
+  opacity: 1;
 }
 
 /* Bouton like CARTES RESTAURANTS */
 .card-title-icon_button-like :nth-child(1) {
   position: absolute;
+  z-index: 900;
+  color: #000000;
+  transition-property: all;
+  transition-duration: 1s;
   top: 35px;
   right: 45px;
-  z-index: 1000;
-  color: #000000;
-  transition-property: color;
-  transition-duration: 1s;
 }
 .card-title-icon_button-like :last-child {
   position: absolute;
-  top: 35px;
-  right: 45px;
-  color: #ffffff;
-  transition-property: color;
-  transition-duration: 1s;
-}
-.card-title-icon_button-like:hover :nth-child(1), .card-title-icon_button-like:hover :last-child {
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.8s;
+  top: 35px;
+  right: 45px;
+}
+.card-title-icon_button-like:hover :nth-child(1) {
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card-title-icon_button-like:hover :last-child {
+  opacity: 1;
 }
 
 article {
@@ -227,28 +240,30 @@ article {
 .menus_section {
   padding: 10px;
   overflow: hidden;
-  animation: glissement 1000ms;
-  animation-fill-mode: forwards;
 }
 .menus_section .menus_section-border_div {
   width: 40px;
   height: 2px;
   background: #99E2D0;
 }
+
+.menus-section_article-box {
+  animation: glissement 3000ms;
+  animation-fill-mode: forwards;
+}
+
 @keyframes glissement {
   0% {
-    margin-top: -10%;
+    margin-top: -30%;
     opacity: 0;
   }
-  50% {
-    opacity: 0%;
+  10% {
+    opacity: 1;
   }
   100% {
     margin-top: 0%;
-    opacity: 100%;
   }
 }
-
 #restaurants-cards_container {
   display: flex;
   justify-content: center;

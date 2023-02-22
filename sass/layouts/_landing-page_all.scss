@@ -1,10 +1,10 @@
 #landing-page_box {
     
-    right:0;
     width: 100%;
     height:100%;
     position: fixed;
     top: 0;
+    right:0;
     z-index: 950;
     background: $color-third;
     background: linear-gradient(115deg, $color-third 15%, $color-primary 45%, $color-secondary 75%);
