@@ -247,23 +247,6 @@ article {
   background: #99E2D0;
 }
 
-.menus-section_article-box {
-  animation: glissement 3000ms;
-  animation-fill-mode: forwards;
-}
-
-@keyframes glissement {
-  0% {
-    margin-top: -30%;
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  100% {
-    margin-top: 0%;
-  }
-}
 #restaurants-cards_container {
   display: flex;
   justify-content: center;
@@ -433,6 +416,70 @@ footer .footer_nav_link p {
   width: 180px;
 }
 
+.menus-section_article-box :nth-child(1) {
+  animation: article1 1000ms;
+  animation-fill-mode: forwards;
+}
+
+.menus-section_article-box :nth-child(2) {
+  animation: article2 1000ms;
+  animation-fill-mode: forwards;
+}
+
+.menus-section_article-box :nth-child(3) {
+  animation: article3 1000ms;
+  animation-fill-mode: forwards;
+}
+
+.menus-section_article-box :nth-child(4) {
+  animation: article4 1000ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes article1 {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+}
+@keyframes article2 {
+  0% {
+    opacity: 0;
+  }
+  37% {
+    opacity: 0;
+  }
+  67% {
+    opacity: 1;
+  }
+}
+@keyframes article3 {
+  0% {
+    opacity: 0;
+  }
+  69% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 1;
+  }
+}
+@keyframes article4 {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .plate-description_bloc {
   width: 250px;
   align-items: center;
